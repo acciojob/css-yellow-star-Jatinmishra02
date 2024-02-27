@@ -1,34 +1,21 @@
-/*  your css code here. If applicable */
     .star {
-      display: inline-block;
-      width: 100px;
-      height: 100px;
-      color: yellow;
       position: relative;
-    }
-
-    .star::before,
-    .star::after {
-      content: '';
-      position: absolute;
-      top: 0;
+      display: inline-block;
       width: 0;
       height: 0;
-      border-style: solid;
+      border-right: 50px solid transparent;
+      border-bottom: 35px solid yellow;
+      border-left: 50px solid transparent;
+      transform: rotate(35deg);
     }
 
     .star::before {
-      left: 50%;
-      border-width: 0 20px 35px 20px;
-      border-color: transparent transparent yellow transparent;
-      transform: rotate(35deg);
-      transform-origin: 0 100%;
-    }
-
-    .star::after {
-      left: 50%;
-      border-width: 0 20px 35px 20px;
-      border-color: transparent transparent yellow transparent;
+      border-bottom: 40px solid yellow;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      content: "";
+      position: absolute;
+      top: -25px;
+      left: -50px;
       transform: rotate(-35deg);
-      transform-origin: 0 100%;
     }
