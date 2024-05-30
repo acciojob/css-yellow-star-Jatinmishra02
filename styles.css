@@ -1,21 +1,42 @@
-    .star {
-      position: relative;
-      display: inline-block;
-      width: 0;
-      height: 0;
-      border-right: 50px solid transparent;
-      border-bottom: 35px solid yellow;
-      border-left: 50px solid transparent;
-      transform: rotate(35deg);
-    }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #fff;
+}
 
-    .star::before {
-      border-bottom: 40px solid yellow;
-      border-left: 15px solid transparent;
-      border-right: 15px solid transparent;
-      content: "";
-      position: absolute;
-      top: -25px;
-      left: -50px;
-      transform: rotate(-35deg);
-    }
+.star {
+  position: relative;
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid yellow;
+  transform: rotate(35deg);
+}
+
+.star::before, .star::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.star::before {
+  border-bottom: 100px solid yellow;
+  transform: rotate(-70deg);
+  transform-origin: 0 0;
+}
+
+.star::after {
+  border-bottom: 100px solid yellow;
+  transform: rotate(70deg);
+  transform-origin: 0 0;
+}
