@@ -18,7 +18,8 @@ body {
   transform: rotate(35deg);
 }
 
-.star::before, .star::after {
+.star::before,
+.star::after {
   content: '';
   position: absolute;
   top: 0;
